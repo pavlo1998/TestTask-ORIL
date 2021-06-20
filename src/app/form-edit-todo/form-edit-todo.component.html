@@ -1,0 +1,21 @@
+
+
+<div *ngIf="hiddenEditMod" class="popup-fade">
+    <div  id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div  class="col-8 text-center"><h3 style="font-weight: 500;" class="modal-title" id="exampleModalCenterTitle">Edit a ToDo</h3></div>
+                <div class="col-2"><button type="button" (click)="closeEditMod()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>&times;</span>
+                  </button></div>
+                
+                
+              </div>
+           
+            <div class="row"><textarea placeholder="Start typing"  cols="30" rows="10"  [(ngModel)]="contentForEdit"></textarea></div>
+
+            <div class="row"><button type="button" (click)="saveChanges()" class="btn">Save ToDo</button></div>
+        </div>
+    </div>
+</div>

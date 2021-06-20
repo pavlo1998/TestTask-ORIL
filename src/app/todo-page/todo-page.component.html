@@ -1,0 +1,34 @@
+<div id="cont" class="container">
+    <h1 style="font-weight: 600;">All ToDo's</h1>
+    <button id="btn" (click)="addModal()"  class="btn">Add a ToDo </button>
+
+    
+</div>
+
+
+
+
+<div class="container">
+    <div id="item" *ngFor="let item of taskList" >
+        <div class="form-check">
+           
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label style="width: 400px;" class="form-check-label"  for="flexCheckDefault">
+              {{item.content}}
+            </label>
+          </div>
+
+        
+         <div class="form-options">
+             <button class="btn" (click)="openEditModal(item.content)" mat-icon-button><mat-icon>border_color</mat-icon></button>
+                 <button class="btn" (click)="openRemoveModal(item.id)" mat-icon-button><mat-icon>delete</mat-icon></button>
+         </div>
+        
+
+    </div>
+</div>
+
+
+<app-from-creat-todo [taskList]="taskList" (addModalData)="setDataAddModal($event)" [hidden]="hidden"></app-from-creat-todo>
+<app-form-remove-to-do [idForDelete]="idForDelete" (deleteModalData)="setDataDeleteModal($event)" [hiddenDelMod]="hiddenDelMod"></app-form-remove-to-do>
+<app-form-edit-todo [contentForEdit]="contentForEdit" (hideModal)="dataForClose($event)" (deleteModalData)="setDataEditModal($event)" [hiddenEditMod]="hiddenEditMod"></app-form-edit-todo>

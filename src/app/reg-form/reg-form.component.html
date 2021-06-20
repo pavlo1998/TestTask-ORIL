@@ -1,7 +1,7 @@
 
 <div id="main" class="container">
   <div class="container" id="second">
-    <form [formGroup]="userRegForm" action="https://jsonplaceholder.typicode.com/users" (ngSubmit)="onSubmit()">
+    <form [formGroup]="userRegForm" #f="ngForm"  action="https://jsonplaceholder.typicode.com/users" (ngSubmit)="onSubmit(f.value)">
         <div class="panel panel-primary">
            <div class="text-center" style="padding-top: 2rem;">
                <h2>Create account</h2>
@@ -81,13 +81,17 @@
         </div>
 
         
+        <!-- <a routerLink="/TodoList"><button  id="submit" type="submit" class="btn">Create Account</button></a> -->
 
     
-        <button id="submit" type="submit" class="btn">Create Account -></button>
+        <button  id="submit" type="submit" class="btn">Create Account</button>
+        <!-- <button  id="submit" (click)="getData()"  class="btn">Get data</button> -->
+
         <footer style="height: 4rem;"></footer>
       </form>
 </div>
     
+<router-outlet></router-outlet>
     
 
 </div>

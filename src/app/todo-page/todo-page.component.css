@@ -1,0 +1,46 @@
+.container{
+    width: 50%;
+    margin-top: 3rem;
+}
+#btn{
+    background: linear-gradient( to left, #1EA39B, #38EF7D);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    height: 32px;
+}
+
+#item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E1E1E1;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.form-check{
+    margin: auto;
+    width: 600px;
+    word-wrap: break-word;
+}
+
+
+#cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+input[type="checkbox"]:checked+label{ text-decoration: line-through; }
+
+label{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
