@@ -54,7 +54,7 @@ export class TodoServiceService {
 
 
   addNewTodo(user: any){
-    return this.taskList.push(user)
+    return this.taskList.unshift(user)
     
   }
 

@@ -28,7 +28,7 @@ export class FormEditTodoComponent implements OnInit {
   saveChanges(){
 
     this.deleteModalData.emit(this.contentForEdit);
-    console.log(this.contentForEdit)
+    console.log(this.contentForEdit);
     
   }
 

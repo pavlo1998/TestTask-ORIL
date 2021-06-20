@@ -13,12 +13,14 @@ export class RegFormComponent implements OnInit {
 
   userRegForm!: FormGroup;
 
-  // private router: Router
-  // private http!: HttpClient;
 
-constructor(private router: Router ) {
-  
-}
+
+constructor( 
+  private http: HttpClient,
+  private router: Router
+  ) {}
+
+
 
   ngOnInit(): void {
 
@@ -42,13 +44,11 @@ constructor(private router: Router ) {
 
   onSubmit(data: any): void{
    
-    
-    
-    // this.http.post(' http://jsonplaceholder.typicode.com/posts', data)
-    // .subscribe(
-    //   (response) => console.log(response),
-    //   (error) => console.log(error)
-    // )
+    this.http.post(' https://jsonplaceholder.typicode.com/users', data)
+    .subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
 
     this.router.navigateByUrl('/TodoList');
   }
